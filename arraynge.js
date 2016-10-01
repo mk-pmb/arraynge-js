@@ -39,6 +39,7 @@ module.exports = (function setup() {
 
   CF.warpZero = function (num, add) {
     if (num !== +num) { return num; }
+    if (num >= 0) { return num; }
     num += add;
     return (num >= 0 ? num : false);
   };
@@ -54,7 +55,7 @@ module.exports = (function setup() {
 
 
   CF.validateBounds = function (num, min, max) {
-    if (num !== +num) { return false; }
+    if (!isFin(num)) { return false; }
     if (num < min) { return false; }
     if (num > max) { return false; }
     return num;
@@ -90,6 +91,7 @@ module.exports = (function setup() {
 
 
   PT.list = (function listMethodFactory(oldList) {
+    if ((typeof oldList) === 'number') { oldList = { length: oldList }; }
     if (!oldList) { oldList = false; }
     var listFunc = function (newList) {
       if (arguments.length === 0) { return oldList; }
@@ -97,7 +99,7 @@ module.exports = (function setup() {
       return this;
     };
     return listFunc;
-  }());
+  }(Number.POSITIVE_INFINITY));
 
 
   PT.len = function () { return (+this.list().length || 0); };

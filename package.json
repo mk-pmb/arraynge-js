@@ -1,5 +1,5 @@
 { "name": "arraynge",
-  "version": "0.0.2",
+  "version": "0.1.1",
   "description": "Various transforms for ranges of array/list indices. [npm search keywords: bounds confine enumerate index indexes map modulo translate validate warp]",
   "keywords": [
     "array",
@@ -31,13 +31,11 @@
   "private": false, "license": "ISC",
 
   "main": "arraynge.js",
-  "scripts": { "test": "demo-util-160404-test-demos" },
+  "scripts": { "test": "nodejs test/usage.js" },
   "directories": {
     "doc": "doc",
     "test": "test"
   },
-
-  "devDependencies": { "lib-demo-util-160404": "^0.1.0" },
 
 
   "npm vs. BOM = Unexpected token": "-*- coding: UTF-8 -*-"

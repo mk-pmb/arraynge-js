@@ -11,7 +11,7 @@ Various transforms for ranges of array/list indices.
 
 Usage
 -----
-see [test/usage.demo.js](test/usage.demo.js)
+see [test/usage.js](test/usage.js)
 
 
 API
@@ -43,7 +43,9 @@ so you can chain them.
 range.bounds(newFirstIndex, newLastIndex);
 range.from(newFirstIndex);
 range.upto(newLastIndex);
-range.list(newList);
+range.list(null || false);  // forget current list
+range.list(someObject);     // set new list
+range.list(someNumber);     // set list to array-like object { length: number }
 ```
 
 ### Query the config
@@ -75,7 +77,7 @@ range.translate(fromDist, lastDist);  // add offsets to each
 
 ### Cautious transforms
   * They won't modify the config.
-  * If any of the bounds is not a number, or is out of range,
+  * If any of the bounds is not a finite number, or is out of range,
     the cautious transforms will abort without any action or
     side effect and will return `false`.
   * Parameters `len` or `max` optional as above.
