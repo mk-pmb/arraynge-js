@@ -28,8 +28,11 @@ range = arraynge();
 range = arraynge(from, upto);           // range includes both values
 range = arraynge(from, upto, list);
 
-makeRangeFromList = arraynge.withThisList(list);
+makeRangeFromList = arraynge.withThisList.bind(list);
 range = makeRangeFromList(from, upto);
+
+list.makeRange = arraynge.withThisList;
+range = list.makeRange(from, upto);
 ```
 
 ### Configure an arraynge
