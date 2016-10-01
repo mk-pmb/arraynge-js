@@ -1,0 +1,44 @@
+{ "name": "arraynge",
+  "version": "0.0.1",
+  "description": "Various transforms for ranges of array/list indices. [npm search keywords: bounds confine enumerate index indexes map modulo translate validate warp]",
+  "keywords": [
+    "array",
+    "bounds",
+    "confine",
+    "enumerate",
+    "index",
+    "indexes",
+    "indices",
+    "list",
+    "map",
+    "modulo",
+    "range",
+    "translate",
+    "validate",
+    "warp"
+  ],
+
+  "author": "M.K. (https://github.com/mk-pmb)",
+  "homepage": "https://github.com/mk-pmb/arraynge-js#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mk-pmb/arraynge-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mk-pmb/arraynge-js/issues"
+  },
+
+  "private": false, "license": "ISC",
+
+  "main": "arraynge.js",
+  "scripts": { "test": "demo-util-160404-test-demos" },
+  "directories": {
+    "doc": "doc",
+    "test": "test"
+  },
+
+  "devDependencies": { "lib-demo-util-160404": "^0.1.0" },
+
+
+  "npm vs. BOM = Unexpected token": "-*- coding: UTF-8 -*-"
+}
