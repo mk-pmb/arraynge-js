@@ -1,5 +1,5 @@
 { "name": "arraynge",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Various transforms for ranges of array/list indices. [npm search keywords: bounds confine enumerate index indexes map modulo translate validate warp]",
   "keywords": [
     "array",

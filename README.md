@@ -45,7 +45,7 @@ range.from(newFirstIndex);
 range.upto(newLastIndex);
 range.list(null || false);  // forget current list
 range.list(someObject);     // set new list
-range.list(someNumber);     // set list to array-like object { length: number }
+range.list(someNumber);     // set list to object { length: someNumber }
 ```
 
 ### Query the config
