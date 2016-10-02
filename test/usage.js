@@ -62,6 +62,12 @@ eq(rg.map(getArgs),
     ]);
 
 
+rg = arraynge(-6, -3, list).warpZero().confine();
+eq(rg.boundsIfValid(),  [0, 3]);
+rg = arraynge(-7, -3, list).warpZero().confine();
+eq(rg.boundsIfValid(),  false);
+
+
 rg = arraynge(4, 8, list).modulo();
 eq(rg.boundsIfValid(),  [4, 2]);
 eq(rg.map(getArgs),     []);
